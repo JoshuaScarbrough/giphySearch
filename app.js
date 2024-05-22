@@ -3,8 +3,11 @@ const searchButton = document.querySelector("#searchGiphy")
 const canvas = document.querySelector("body")
 
 
-async function searchGif(e, gif){
+async function searchGif(e){
     e.preventDefault()
+
+    let gif = input.value
+    console.log(gif)
 
     const randNum = Math.floor(Math.random() * 51);
     const url = `https://api.giphy.com/v1/gifs/search?q=${gif}&api_key=MhAodEJIJxQMxW9XqxKjyXfNYdLoOIym`
